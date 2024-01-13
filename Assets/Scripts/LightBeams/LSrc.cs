@@ -33,8 +33,8 @@ public class LSrc : MonoBehaviour
         {
             return;
         }
-
         beam.AddLightPoint(position);
+
 
         RaycastHit hit;
         Ray ray = new(position, direction);
@@ -44,7 +44,20 @@ public class LSrc : MonoBehaviour
             beam.AddLightPoint(hit.point);
             if (hit.collider.CompareTag("LightDest"))
                 hit.collider.gameObject.GetComponent<LDest>().Activation();
-            if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Reflective"))
+            else if (hit.collider.CompareTag("Prism"))
+            {
+                Debug.Log("In Prism");
+                int numSplits = hit.collider.gameObject.GetComponent<Prism>().GetNumSplits();
+                Vector3 rayRot = Quaternion.AngleAxis(90, Vector3.up) * ray.direction;
+                // ShootLaser(hit.point, rayRot, beam, numBounces);
+                float angle = 180 / (numSplits + 1);
+                for (int i = 0; i < numSplits; i++)
+                {
+                    rayRot = Quaternion.AngleAxis(-angle, Vector3.up) * rayRot;
+                    ShootLaser(hit.point, rayRot, beam, numBounces);
+                }
+            }
+            else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Reflective"))
             {
                 Debug.DrawRay(position, direction * hit.distance, Color.yellow);
                 ShootLaser(hit.point, Vector3.Reflect(ray.direction, hit.normal), beam, --numBounces);
