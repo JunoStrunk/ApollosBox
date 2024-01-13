@@ -41,10 +41,11 @@ public class LSrc : MonoBehaviour
         Ray ray = new(position, direction);
         if (Physics.Raycast(position, direction, out hit, maxDist))
         {
+            Debug.Log(hit.transform.name);
 
             beam.AddLightPoint(hit.point);
             if (hit.collider.CompareTag("LightDest"))
-                hit.collider.gameObject.GetComponent<I_LDest>().Activation();
+                hit.collider.gameObject.GetComponent<I_LDest>().Activation(mat);
             else if (hit.collider.CompareTag("Prism"))
             {
                 hit.collider.gameObject.GetComponent<Prism>().Split(newSrc, ray);
