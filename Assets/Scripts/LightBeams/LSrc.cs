@@ -41,7 +41,6 @@ public class LSrc : MonoBehaviour
         Ray ray = new(position, direction);
         if (Physics.Raycast(position, direction, out hit, maxDist))
         {
-            Debug.Log(hit.transform.name);
 
             beam.AddLightPoint(hit.point);
             if (hit.collider.CompareTag("LightDest"))
