@@ -5,12 +5,13 @@ using UnityEngine;
 public class LSrc : MonoBehaviour
 {
     public LBeam beam;
+    public Material mat;
     [SerializeField]
     int bounces = 2;
     [SerializeField]
     float maxDist = 200f;
     [SerializeField]
-    Material mat;
+    GameObject newSrc;
     int layerMask;
     int otherLayers;
 
@@ -43,19 +44,10 @@ public class LSrc : MonoBehaviour
 
             beam.AddLightPoint(hit.point);
             if (hit.collider.CompareTag("LightDest"))
-                hit.collider.gameObject.GetComponent<LDest>().Activation();
+                hit.collider.gameObject.GetComponent<I_LDest>().Activation();
             else if (hit.collider.CompareTag("Prism"))
             {
-                Debug.Log("In Prism");
-                int numSplits = hit.collider.gameObject.GetComponent<Prism>().GetNumSplits();
-                Vector3 rayRot = Quaternion.AngleAxis(90, Vector3.up) * ray.direction;
-                // ShootLaser(hit.point, rayRot, beam, numBounces);
-                float angle = 180 / (numSplits + 1);
-                for (int i = 0; i < numSplits; i++)
-                {
-                    rayRot = Quaternion.AngleAxis(-angle, Vector3.up) * rayRot;
-                    ShootLaser(hit.point, rayRot, beam, numBounces);
-                }
+                hit.collider.gameObject.GetComponent<Prism>().Split(newSrc, ray);
             }
             else if (hit.transform.gameObject.layer == LayerMask.NameToLayer("Reflective"))
             {

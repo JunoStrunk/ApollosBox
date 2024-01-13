@@ -8,13 +8,18 @@ public class LBeam : MonoBehaviour
     LineRenderer lightBeam;
     List<Vector3> lightPoints = new();
 
+    private void Start()
+    {
+        lightBeam = GetComponent<LineRenderer>();
+    }
+
     public void Init(Vector3 pos, Vector3 dir, Material mat)
     {
-        this.lightBeam = new LineRenderer();
+        // this.lightBeam = new LineRenderer();
+        this.lightBeam = GetComponent<LineRenderer>();
         this.pos = pos;
         this.dir = dir;
 
-        this.lightBeam = this.gameObject.AddComponent(typeof(LineRenderer)) as LineRenderer;
         this.lightBeam.startWidth = 0.5f;
         this.lightBeam.endWidth = 0.5f;
         this.lightBeam.material = mat;

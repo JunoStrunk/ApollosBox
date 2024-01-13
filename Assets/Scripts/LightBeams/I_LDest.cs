@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LDest : MonoBehaviour
+public class I_LDest : MonoBehaviour
 {
     public bool activated = false;
 
-    public void Activation()
+    public virtual void Activation()
     {
         //Put whatever you want to happen on activation here
         //Will probably use event system
