@@ -7,7 +7,7 @@ public class DestCombine : I_LDest
     public List<Material> targetMats;
     int matsHitting = 0;
 
-    public override void Activation(Material mat)
+    public override void Activation(Material mat, Ray ray)
     {
         if (!activated && targetMats.Contains(mat))
         {

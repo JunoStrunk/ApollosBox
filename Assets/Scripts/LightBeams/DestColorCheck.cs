@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestColorCheck : I_LDest
 {
     public Material targetMat;
-    public override void Activation(Material mat)
+    public override void Activation(Material mat, Ray ray)
     {
         if (!activated && mat == targetMat)
         {

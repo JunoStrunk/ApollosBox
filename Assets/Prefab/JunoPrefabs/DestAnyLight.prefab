@@ -118,4 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4e7442868e4246bda99b4a402de81b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnNewSrc: 0
+  newSrc: {fileID: 7242607983313931426, guid: 6a7edc8dd8d6544e58ce8e9fabacef71, type: 3}
+  newSrcColor: {r: 1, g: 0, b: 0, a: 1}
   activated: 0
