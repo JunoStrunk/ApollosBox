@@ -10,7 +10,7 @@ public class I_LDest : MonoBehaviour
     [SerializeField]
     Color newSrcColor;
     [SerializeField]
-    float newSrcAngle;
+    public float newSrcAngle;
     public bool activated = false;
 
     public virtual void Activation(Color color, Ray ray)
