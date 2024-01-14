@@ -9,6 +9,8 @@ public class I_LDest : MonoBehaviour
     GameObject newSrc;
     [SerializeField]
     Color newSrcColor;
+    [SerializeField]
+    float newSrcAngle;
     public bool activated = false;
 
     public virtual void Activation(Color color, Ray ray)
@@ -20,7 +22,8 @@ public class I_LDest : MonoBehaviour
             Debug.Log("Activated True");
             if (spawnNewSrc)
             {
-                GameObject newLight = Instantiate(newSrc, this.transform.position, Quaternion.LookRotation(ray.direction, Vector3.up));
+                Vector3 rayRot = Quaternion.AngleAxis(newSrcAngle, Vector3.up) * ray.direction;
+                GameObject newLight = Instantiate(newSrc, this.transform.position, Quaternion.LookRotation(rayRot, Vector3.up));
                 newLight.GetComponentInChildren<LineRenderer>().endColor = newSrcColor;
                 newLight.GetComponentInChildren<LineRenderer>().startColor = newSrcColor;
             }

@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class MultiColorManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void destHit()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
