@@ -10,7 +10,7 @@ public class Prism : MonoBehaviour
     int numSplits = 3;
 
     [SerializeField]
-    List<Material> colors;
+    List<Color> colors;
 
     bool hit = false;
 
@@ -24,8 +24,9 @@ public class Prism : MonoBehaviour
             for (int i = 0; i < numSplits; i++)
             {
                 rayRot = Quaternion.AngleAxis(-angle, Vector3.up) * rayRot;
-                newSrc.GetComponentInChildren<LSrc>().mat = colors[i % colors.Count];
                 GameObject newLight = Instantiate(newSrc, this.transform.position, Quaternion.LookRotation(rayRot, Vector3.up));
+                newLight.GetComponentInChildren<LineRenderer>().endColor = colors[i % colors.Count];
+                newLight.GetComponentInChildren<LineRenderer>().startColor = colors[i % colors.Count];
 
             }
         }

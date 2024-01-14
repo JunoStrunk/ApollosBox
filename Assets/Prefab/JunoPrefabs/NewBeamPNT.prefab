@@ -141,7 +141,7 @@ LineRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 2
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beam: {fileID: 3840482645062731360}
+  mat: {fileID: 2100000, guid: 0760271498b031047a32a3cdaeb9d300, type: 2}
   bounces: 2
   maxDist: 200
-  mat: {fileID: 2100000, guid: 7f85d140904df44c5ba625fa3c72b9ce, type: 2}
   newSrc: {fileID: 5212690695237938953}
