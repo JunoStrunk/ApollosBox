@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beam: {fileID: 3590266704828618565}
   mat: {fileID: 2100000, guid: 0760271498b031047a32a3cdaeb9d300, type: 2}
-  bounces: 2
+  bounces: 4
   maxDist: 200
   newSrc: {fileID: 7242607983313931426}
 --- !u!1 &7242607983313931426
@@ -179,6 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 869ff2ea1ff464ae9ac97b19238dca36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!120 &2345181237782129157
 LineRenderer:
   serializedVersion: 2
