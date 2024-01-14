@@ -11,19 +11,20 @@ public class DestCombine : I_LDest
     {
         if (!activated && targetMats.Contains(mat))
         {
-            activationTimer();
+            StartCoroutine(activationTimer());
         }
         if (!activated && matsHitting >= targetMats.Count)
         {
             Debug.Log("Multi Mat!");
             activated = true;
         }
+        Debug.Log(matsHitting);
     }
 
     public IEnumerator activationTimer()
     {
         matsHitting++;
-        yield return new WaitForSeconds(0.001f);
+        yield return new WaitForSeconds(0.01f);
         matsHitting--;
     }
 }
