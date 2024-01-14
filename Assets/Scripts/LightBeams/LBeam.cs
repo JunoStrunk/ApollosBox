@@ -23,8 +23,6 @@ public class LBeam : MonoBehaviour
         this.lightBeam.startWidth = 0.5f;
         this.lightBeam.endWidth = 0.5f;
         this.lightBeam.material = mat;
-        this.lightBeam.startColor = Color.yellow;
-        this.lightBeam.endColor = Color.white;
     }
 
     public void clearBeam()
