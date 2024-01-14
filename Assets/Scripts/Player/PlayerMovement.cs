@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     {
         velocity.y = Mathf.Sqrt(jumpForce * -2f * Physics.gravity.y);
         canJump = false;
-        Invoke("ResetJumpCooldown", 0.5f);
+        Invoke("ResetJumpCooldown", 1f);
     }
 
     void ResetJumpCooldown()
