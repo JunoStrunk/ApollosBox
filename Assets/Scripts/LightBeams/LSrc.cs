@@ -44,7 +44,7 @@ public class LSrc : MonoBehaviour
 
             beam.AddLightPoint(hit.point);
             if (hit.collider.CompareTag("LightDest"))
-                hit.collider.gameObject.GetComponent<I_LDest>().Activation(mat, ray);
+                hit.collider.gameObject.GetComponent<I_LDest>().Activation(beam.color, ray);
             else if (hit.collider.CompareTag("Prism"))
             {
                 hit.collider.gameObject.GetComponent<Prism>().Split(newSrc, ray);

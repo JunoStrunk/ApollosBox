@@ -25,6 +25,7 @@ public class Prism : MonoBehaviour
             {
                 rayRot = Quaternion.AngleAxis(-angle, Vector3.up) * rayRot;
                 GameObject newLight = Instantiate(newSrc, this.transform.position, Quaternion.LookRotation(rayRot, Vector3.up));
+                // newLight.GetComponentInChildren <
                 newLight.GetComponentInChildren<LineRenderer>().endColor = colors[i % colors.Count];
                 newLight.GetComponentInChildren<LineRenderer>().startColor = colors[i % colors.Count];
 

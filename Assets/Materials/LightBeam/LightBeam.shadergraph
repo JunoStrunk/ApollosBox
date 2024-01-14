@@ -31,7 +31,11 @@
             "m_Id": "3a947d802abd485f859b46cae9cc9cdf"
         }
     ],
-    "m_Keywords": [],
+    "m_Keywords": [
+        {
+            "m_Id": "e55798cfa2f8443e9d10db54178b93a9"
+        }
+    ],
     "m_Dropdowns": [],
     "m_CategoryData": [
         {
@@ -3783,6 +3787,9 @@
         },
         {
             "m_Id": "3a947d802abd485f859b46cae9cc9cdf"
+        },
+        {
+            "m_Id": "e55798cfa2f8443e9d10db54178b93a9"
         }
     ]
 }
@@ -5206,6 +5213,47 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
+    "m_ObjectId": "e55798cfa2f8443e9d10db54178b93a9",
+    "m_Guid": {
+        "m_GuidSerialized": "8e77aee4-82d9-48e0-bbf9-870dc09c7c38"
+    },
+    "m_Name": "DetectColor",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "DetectColor",
+    "m_DefaultReferenceName": "_DETECTCOLOR",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_DismissedVersion": 0,
+    "m_KeywordType": 1,
+    "m_KeywordDefinition": 0,
+    "m_KeywordScope": 0,
+    "m_KeywordStages": 63,
+    "m_Entries": [
+        {
+            "id": 4,
+            "displayName": "White",
+            "referenceName": "WHITE"
+        },
+        {
+            "id": 1,
+            "displayName": "Blue",
+            "referenceName": "BLUE"
+        },
+        {
+            "id": 2,
+            "displayName": "Red",
+            "referenceName": "RED"
+        }
+    ],
+    "m_Value": 0,
+    "m_IsEditable": true
 }
 
 {

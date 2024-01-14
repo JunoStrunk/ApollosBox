@@ -11,7 +11,7 @@ public class I_LDest : MonoBehaviour
     Color newSrcColor;
     public bool activated = false;
 
-    public virtual void Activation(Material mat, Ray ray)
+    public virtual void Activation(Color color, Ray ray)
     {
         //Put whatever you want to happen on activation here
         //Will probably use event system
