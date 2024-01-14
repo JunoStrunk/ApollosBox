@@ -276,7 +276,7 @@ LineRenderer:
     numCapVertices: 0
     alignment: 0
     textureMode: 2
-    textureScale: {x: 0.92, y: 0.49}
+    textureScale: {x: 0.92, y: 0.2}
     shadowBias: 0.5
     generateLightingData: 0
   m_MaskInteraction: 0
