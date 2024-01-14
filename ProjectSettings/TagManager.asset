@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LightDest
   - Prism
+  - PickUp
   layers:
   - Default
   - TransparentFX
