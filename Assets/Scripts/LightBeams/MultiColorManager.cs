@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MultiColorManager : MonoBehaviour
 {
+    public GameObject EndLight;
     public List<I_LDest> dests;
     int numHitDests = 0;
 
@@ -16,6 +17,6 @@ public class MultiColorManager : MonoBehaviour
 
     public virtual void Activate()
     {
-        Debug.Log("Do something");
+        EndLight.SetActive(true);
     }
 }
