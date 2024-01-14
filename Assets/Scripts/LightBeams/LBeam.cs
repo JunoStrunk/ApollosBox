@@ -6,6 +6,8 @@ public class LBeam : MonoBehaviour
 {
     Vector3 pos, dir;
     LineRenderer lightBeam;
+    // [HideInInspector]
+    public Color color;
     List<Vector3> lightPoints = new();
 
     private void Start()
@@ -23,6 +25,7 @@ public class LBeam : MonoBehaviour
         this.lightBeam.startWidth = 0.5f;
         this.lightBeam.endWidth = 0.5f;
         this.lightBeam.material = mat;
+        color = lightBeam.startColor;
     }
 
     public void clearBeam()
