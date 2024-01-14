@@ -30,9 +30,4 @@ public class I_LDest : MonoBehaviour
             activated = true;
         }
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        Debug.Log(other.gameObject.name);
-    }
 }
